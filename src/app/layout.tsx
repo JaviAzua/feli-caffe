@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Raleway } from "next/font/google";
 import "./globals.css";
 import ResponsiveTitle from "@/components/responsive-title";
+import { Suspense } from "react";
 
 export const metadata: Metadata = {
   title: "Felipe Cafferata",
@@ -20,7 +21,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${raleway.variable} antialiased`}>
         <ResponsiveTitle />
-        {children}
+        <Suspense fallback="...loading">{children}</Suspense>
       </body>
     </html>
   );

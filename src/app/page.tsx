@@ -1,4 +1,5 @@
 "use client";
+
 import AnalogSection from "@/components/analog-section";
 import DigitalSection from "@/components/digital-section";
 import SplitLayout from "@/components/split-layout";
