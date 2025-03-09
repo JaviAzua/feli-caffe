@@ -2,13 +2,16 @@
 
 import { analogProjects } from "@/lib/projects";
 import { ProjectGallery } from "./project-gallery/project-gallery";
+import { Suspense } from "react";
 
 export default function AnalogPage() {
   return (
-    <ProjectGallery
-      title="ANALOG"
-      projects={analogProjects}
-      paramPrefix="analog-"
-    />
+    <Suspense fallback="...Loading">
+      <ProjectGallery
+        title="ANALOG"
+        projects={analogProjects}
+        paramPrefix="analog-"
+      />
+    </Suspense>
   );
 }

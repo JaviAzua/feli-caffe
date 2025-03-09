@@ -20,8 +20,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${raleway.variable} antialiased`}>
-        <ResponsiveTitle />
-        <Suspense fallback="...loading">{children}</Suspense>
+        <Suspense fallback="...loading">
+          <ResponsiveTitle />
+          {children}
+        </Suspense>
       </body>
     </html>
   );
